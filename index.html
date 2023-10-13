@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Josefin+Sans:wght@400;700&family=League+Spartan:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:ital,wght@0,400;1,700&family=Rubik:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="todo_app" id="todo_app">
+    <div class="background">
+      <picture>
+        <source media="(min-width:1025px )" srcset="./images/bg-desktop-dark.jpg">
+        <source media="(min-width:1025px )" srcset="./images/bg-desktop-light.jpg">
+        <img src="./images/bg-mobile-dark.jpg" alt="bg-mobile-dark" class="dark-bg-mobile">
+        <img src="./images/bg-mobile-light.jpg" alt="bg-mobile-light" class="light-bg-mobile">
+      </picture>
+      <header>
+        <h2>Todo</h2>
+        <button id="dark-light-mode" class="dark-light-mode">
+          <span class="light-btn"><img src="./images/icon-sun.svg" alt="icon-sun"></span>
+          <span class="dark-btn"><img src="./images/icon-moon.svg" alt="icon-moon"></span>
+        </button>
+      </header>
+    </div>
+
+    <div class="add-todo">
+      <div class="create"></div>
+      <input type="text" id="text" placeholder="Create a new todo..." class="text"></input>
+    </div>
+
+    <main>
+      <!--List of todos-->
+      <div class="todos-container">
+        <div class="todos"></div>
+
+        <div class="items-left">
+          <p class="items_num"></p>
+          <button type="button" id="clear-btn" class="clear_btn">Clear Completed</button>
+        </div>
+
+      </div>
+      <!--filters-->
+      <div class="filters todo">
+        <div class="btns">
+          <button type="button" id="filter-btn" class="filter-btn current" data-id="all">All</button>
+          <button type="button" id="filter-btn" class="filter-btn" data-id="active">Active </button>
+          <button type="button" id="filter-btn" class="filter-btn" data-id="completed">Completed</button>
+        </div>
+        <div class="desktop_filters">
+          <p class="items_num"></p>
+          <div class="desk_filter">
+            <button type="button" id="filter-btn" class="filter-btn current" data-id="all">All</button>
+            <button type="button" id="filter-btn" class="filter-btn" data-id="active">Active </button>
+            <button type="button" id="filter-btn" class="filter-btn" data-id="completed">Completed</button>
+          </div>
+          <button type="button" id="clear-btn" class="clear_btn">Clear Completed</button>
+        </div>
+      </div>
+
+      <p>Drag and drop to reorder list</p>
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Immanuel Osei Boateng</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
